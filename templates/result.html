@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Query Result</title>
+</head>
+<body>
+    <h1>Query Result</h1>
+    {% if error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% else %}
+        <h2>OTP Details</h2>
+        <ul>
+            <li><strong>OTP:</strong> {{ data['otp'] }} (Sender: {{ data['sender'] }})</li>
+            <li><strong>OTP1:</strong> {{ data['otp1'] }} (Sender: {{ data['sender1'] }})</li>
+            <li><strong>OTP2:</strong> {{ data['otp2'] }} (Sender: {{ data['sender2'] }})</li>
+            <li><strong>OTP3:</strong> {{ data['otp3'] }} (Sender: {{ data['sender3'] }})</li>
+        </ul>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
